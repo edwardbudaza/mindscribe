@@ -7,7 +7,7 @@ import { SignInButton, SignUpButton, UserButton } from '@clerk/clerk-react';
 import { useScrollTop } from '@/hooks/use-scroll-top';
 import { ModeToggle } from '@/components/mode-toggle';
 import { Button } from '@/components/ui/button';
-import { Spinner } from '@/components/soinner';
+import { Spinner } from '@/components/spinner';
 import { cn } from '@/lib/utils';
 
 import { Logo } from './logo';
