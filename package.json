@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@blocknote/core": "^0.13.4",
+    "@blocknote/mantine": "^0.13.4",
+    "@blocknote/react": "^0.13.4",
     "@clerk/clerk-react": "^5.0.4",
     "@clerk/nextjs": "^5.0.8",
     "@edgestore/react": "^0.1.6",
@@ -25,6 +28,7 @@
     "cmdk": "^1.0.0",
     "convex": "^1.11.3",
     "emoji-picker-react": "^4.9.3",
+    "lodash": "^4.17.21",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
@@ -40,6 +44,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

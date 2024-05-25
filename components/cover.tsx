@@ -6,11 +6,12 @@ import { useMutation } from "convex/react";
 import { useParams } from "next/navigation";
 
 import { cn } from "@/lib/utils";
+import { useEdgeStore } from "@/lib/edgestore";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useCoverImage } from "@/hooks/use-cover-image";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-import { useEdgeStore } from "@/lib/edgestore";
 
 interface CoverImageProps {
     url?: string;
@@ -75,5 +76,11 @@ export const Cover = ({
             </div>
         )}
     </div>
-  )
-}
+  );
+};
+
+Cover.Skeleton = function CoverSkeleton() {
+    return (
+        <Skeleton className="w-full h-[12vh]" />
+    );
+};
