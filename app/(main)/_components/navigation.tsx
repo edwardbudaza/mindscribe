@@ -135,14 +135,14 @@ export const Navigation = () => {
     <aside 
       ref={sidebarRef}
       className={cn(
-        "group/sidebar h-full bg-secondary overflow-y-auto relative flex w-60 flex-col z-[99999]",
+        "group/sidebar relative z-[99999] flex h-full w-60 flex-col overflow-y-auto bg-secondary",
         isResetting && "transition-all ease-in-out duration-300", 
         isMobile && "w-0"
         )}>
       <div
         onClick={collapse}
         role='button'
-        className={cn('absolute h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 top-3 right-2 opacity-0 group-hover/sidebar:opacity-100',
+        className={cn('absolute right-2 top-3 h-6 w-6 rounded-sm text-muted-foreground opacity-0 transition hover:bg-neutral-300 group-hover/sidebar:opacity-100 dark:hover:bg-neutral-600',
           isMobile && "opacity-100"
         )}
       >
@@ -188,15 +188,14 @@ export const Navigation = () => {
         <div 
           onMouseDown={handleMouseDown}
           onClick={resetWidth}
-          className="opacity-0 group-hover/sidebar:opacity-100
-          transition cursor-ew-resize absolute h-full w-1 bg-primary/10 
-          right-0 top-0" 
+          className="absolute right-0 top-0 h-full w-1 cursor-ew-resize bg-primary/10 opacity-0 transition group-hover/sidebar:opacity-100" 
         />
     </aside>
+
     <div
       ref={navbarRef}
       className={cn(
-        "absolute top-0 z-[99999] left-60 w-[calc(100% - 240px)]",
+        "absolute top-0 z-[99999] left-60 w-[calc(100%-240px)]",
         isResetting && "transition-all ease-in-out duration-300",
         isMobile && "left-0 w-full"
       )}
@@ -207,7 +206,7 @@ export const Navigation = () => {
           onResetWidth={resetWidth}
         />
       ): (
-        <nav className='bg-transparent px-3 py-2 w-full'>
+        <nav className='w-full bg-transparent px-3 py-2'>
           {isCollapsed && <MenuIcon onClick={resetWidth} role='button' className='h-6 w-6 text-muted-foreground' />}
         </nav>
       )}
