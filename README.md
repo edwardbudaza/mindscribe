@@ -19,7 +19,7 @@
 
 ## 🌐 Live Demo
 
-Explore the live demonstration of the project: [Mindscribe](https://mindscribe.vercel.app/)
+Explore the live demonstration of the project: [Mindscribe](https://mindscribe-prod.vercel.app/)
 
 ## 📝 Description
 
